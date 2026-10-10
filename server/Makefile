@@ -4,7 +4,7 @@ TARGET = wsl_server
 SRCS = wsl_server.cpp read_mesh.cpp read_result.cpp
 OBJS = $(SRCS:.cpp=.o)
 INCLUDE_DIRS = .
-LDFLAGS = -lz 
+LDFLAGS = -lz -static-libstdc++ -static-libgcc
 
 # Default rule
 all: $(TARGET)
